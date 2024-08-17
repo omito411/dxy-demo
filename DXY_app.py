@@ -100,7 +100,6 @@ final_x_test_data = np.reshape(final_x_test_data, (final_x_test_data.shape[0], f
 predictions = rnn.predict(final_x_test_data)
 
 # Page configuration
-#st.pyplot()
 
 unscaled_predictions = scaler.inverse_transform(predictions)##you have to unscale data that you-ve scaleed using the inverse transformation
 
@@ -166,13 +165,6 @@ days = np.arange(1, len(array) + 1)
 df = pd.DataFrame(array, columns=["value"], index=days)
 df.index.name = 'day' 
 
-#st.sidebar.header('Input days')
-
-#fig = px.scatter(df, x=df.index, y='value', title='DXY Data Points Over Days')
-#fig.update_layout(
-        #xaxis_title='Day', yaxis_title='DXY price')
-#st.write(fig)
-
 st.write("Enter Day Index:")
 
 if ("plot" not in st.session_state):
@@ -197,60 +189,3 @@ else:
     st.session_state.submitted = True
     value = df.loc[day_input, 'value']
     st.success(f'The value for day {day_input} is {value}')
-        
-
-
-#if day_input == 0 or day_input < 1 or day_input > len(df):
-  #      return "Please enter a valid day index."
-   # value = df.loc[day, 'value']
-    #return f'The value for day {day} is {value}.
-
-
-#st.button('submit-button', on_click=0)
-
-#html.Label("Enter Day Index:"),
-      #  dcc.Input(id='day-input', type='number', value=1, min=1, max=len(df)),
-       # html.Button(id='submit-button', n_clicks=0, children='Submit')
-
-#text1 = st.text_input("Username")
-#text2 = st.text_input("Password", type="password")
-
-
-
-# Initialize the Dash app
-#app = dash.Dash(__name__)
-
-#app.layout = html.Div([
- #   html.H1("DXY price Plot Dashboard"),
-    
-   #    dcc.Graph(
-     #   figure=px.scatter(df, x=df.index, y='value', title='DXY Data Points Over Days').update_layout(
-    #    id='scatter-plot',
-      #      xaxis_title='Day', yaxis_title='DXY price')
-   # ),
-    
-    #html.Div([
-     #   html.Label("Enter Day Index:"),
-      #  dcc.Input(id='day-input', type='number', value=1, min=1, max=len(df)),
-       # html.Button(id='submit-button', n_clicks=0, children='Submit')
-    #]),
-    
-   # html.Div(id='output-value', style={'marginTop': 20})
-#])
-
-
-
-#@app.callback(
- #   Output('output-value', 'children'),
-  #  [Input('submit-button', 'n_clicks')],
-   # [State('day-input', 'value')]
-#)
-#def display_day_value(n_clicks, day):
- #   if day == 0 or day < 1 or day > len(df):
-  #      return "Please enter a valid day index."
-   # value = df.loc[day, 'value']
-    #return f'The value for day {day} is {value}.'
-
-#app.run_server(debug=True)  # Change the port to 8051
-
-# 
