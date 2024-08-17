@@ -1,4 +1,7 @@
 pandas
 plotly
+tensorflow
+numpy
+sklearn
 streamlit
 openpyxl
