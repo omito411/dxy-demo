@@ -2,5 +2,6 @@ pandas
 plotly
 tensorflow
 scikit-learn
+matplotlib
 streamlit
 openpyxl
