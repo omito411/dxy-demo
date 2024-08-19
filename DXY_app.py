@@ -39,8 +39,8 @@ y_training_data = np.array(y_training_data)
 print(x_training_data.shape)##40 days
 
 print(y_training_data.shape)##y is just one feature so it contains rows of data ##each of the values  ##you have to use the x train and y train to predict
-(273, 40)
-(273,)
+#(273, 40)
+#(273,)
 ##need to add an additional dimension because this is required for tensor flow
 
 x_training_data = np.reshape(x_training_data, (x_training_data.shape[0],
