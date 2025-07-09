@@ -8,10 +8,10 @@ import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 from tensorflow import keras
-from keras.api.models import Sequential
-from keras.api.layers import Dense
-from keras.api.layers import LSTM
-from keras.api.layers import Dropout
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.layers import LSTM
+from tensorflow.keras.layers import Dropout
 
 #######################
 # Load data
